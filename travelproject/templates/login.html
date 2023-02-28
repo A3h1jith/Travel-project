@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body style="background: linear-gradient(to left, #66ff99 0%, #ffffff 100%);">
+<form action="login " method="post">
+    {% csrf_token %}
+    <h1 style="color:darkviolet;text-align:center;">Log in here</h1><br>
+    <div style="width=200px;background:lightgreen;text-align:center"><br>
+        <input type="text" name="username" placeholder="Enter your username"><br><br>
+        <input type="password" name="password" placeholder="Enter your password"><br><br>
+        <input type="submit"><br><br>
+
+
+    </div>
+</form>
+{% for msg in messages %}
+<h3 style="background:yellow;color:blue;">{{msg}}</h3>
+{% endfor %}
+</body>
+</html>
